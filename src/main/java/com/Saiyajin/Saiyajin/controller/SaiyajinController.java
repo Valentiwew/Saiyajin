@@ -25,27 +25,27 @@ public class SaiyajinController {
 
     @GetMapping
     public List<Saiyajin> listaSaiyajins(){
-        return SaiyajinService.getSaiyajin();
+        return saiyajinService.getSaiyajin();
     }
 
     @PostMapping
     public Saiyajin agregarSaiyajin(@RequestBody Saiyajin Saiyajin) {
-        return SaiyajinService.saveSaiyajin(Saiyajin);
+        return saiyajinService.saveSaiyajin(Saiyajin);
     }
     
     @GetMapping("{id}")
-    public Saiyajin actualizarSaiyajin(@PathVariable int id) {
-        return SaiyajinService.getSaiyajin(id);
+    public Saiyajin buscarSaiyajin(@PathVariable int id) {
+        return saiyajinService.getSaiyajin(id);
     }
 
     @PutMapping("{id}")
     public Saiyajin actualizarSaiyajin(@PathVariable int id, @RequestBody Saiyajin saiyajin) {
         // el id lo usaremos mas adelante :p
-        return SaiyajinService.updateSaiyajin(Saiyajin);
+        return saiyajinService.updateSaiyajin(id, saiyajin);
     }
     
     @DeleteMapping("{id}")
     public String eliminarSaiyajin(@PathVariable int id){
-        return SaiyajinService.deleteSaiyajin(id);
+        return saiyajinService.deleteSaiyajin(id);
     }
 }
