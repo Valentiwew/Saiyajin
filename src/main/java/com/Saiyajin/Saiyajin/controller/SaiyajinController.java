@@ -7,13 +7,6 @@ import com.Saiyajin.Saiyajin.service.SaiyajinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import java.util.List;
 
 @RestController
@@ -29,8 +22,8 @@ public class SaiyajinController {
     }
 
     @PostMapping
-    public Saiyajin agregarSaiyajin(@RequestBody Saiyajin Saiyajin) {
-        return saiyajinService.saveSaiyajin(Saiyajin);
+    public Saiyajin agregarSaiyajin(@RequestBody Saiyajin saiyajin) {
+        return saiyajinService.saveSaiyajin(saiyajin);
     }
     
     @GetMapping("{id}")
@@ -40,7 +33,6 @@ public class SaiyajinController {
 
     @PutMapping("{id}")
     public Saiyajin actualizarSaiyajin(@PathVariable int id, @RequestBody Saiyajin saiyajin) {
-        // el id lo usaremos mas adelante :p
         return saiyajinService.updateSaiyajin(id, saiyajin);
     }
     
