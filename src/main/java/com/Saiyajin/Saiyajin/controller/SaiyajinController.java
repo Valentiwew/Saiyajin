@@ -4,7 +4,7 @@ package com.Saiyajin.Saiyajin.controller;
 import com.Saiyajin.Saiyajin.model.Saiyajin; /* Clase Saiyajin */
 import com.Saiyajin.Saiyajin.service.SaiyajinService; /* Clase Servicio */
 
-/* Importamos Anotaciones necesarias de String */
+/* Importamos Anotaciones necesarias de Spring */
 import org.springframework.beans.factory.annotation.Autowired; /* Para importar dependencias automaticamente  */
 import org.springframework.web.bind.annotation.*; /* Esto importa todas las Anotaciones */
 
