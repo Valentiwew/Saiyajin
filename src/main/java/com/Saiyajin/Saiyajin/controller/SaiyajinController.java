@@ -21,7 +21,7 @@ import java.util.List;
 public class SaiyajinController {
 
     @Autowired
-    private SaiyajinService SaiyajinService;
+    private SaiyajinService saiyajinService;
 
     @GetMapping
     public List<Saiyajin> listaSaiyajins(){
