@@ -1,12 +1,14 @@
 package com.Saiyajin.Saiyajin.controller;
 
-/* model - service */
-import com.Saiyajin.Saiyajin.model.Saiyajin;
-import com.Saiyajin.Saiyajin.service.SaiyajinService;
+/* Importamos las clases (model - service) */
+import com.Saiyajin.Saiyajin.model.Saiyajin; /* Clase Saiyajin */
+import com.Saiyajin.Saiyajin.service.SaiyajinService; /* Clase Servicio */
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+/* Importamos Anotaciones necesarias de String */
+import org.springframework.beans.factory.annotation.Autowired; /* Para importar dependencias automaticamente  */
+import org.springframework.web.bind.annotation.*; /* Esto importa todas las Anotaciones */
 
+/* Para manejar listas */
 import java.util.List;
 
 @RestController
