@@ -28,17 +28,17 @@ public class SaiyajinController {
         return saiyajinService.saveSaiyajin(saiyajin);
     }
     
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Saiyajin buscarSaiyajin(@PathVariable int id) {
         return saiyajinService.getSaiyajin(id);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public Saiyajin actualizarSaiyajin(@PathVariable int id, @RequestBody Saiyajin saiyajin) {
         return saiyajinService.updateSaiyajin(id, saiyajin);
     }
     
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     public String eliminarSaiyajin(@PathVariable int id){
         return saiyajinService.deleteSaiyajin(id);
     }
