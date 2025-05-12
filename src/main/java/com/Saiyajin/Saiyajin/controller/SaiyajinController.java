@@ -20,7 +20,7 @@ public class SaiyajinController {
 
     @GetMapping
     public List<Saiyajin> listaSaiyajins(){
-        return saiyajinService.getSaiyajin();
+        return saiyajinService.getSaiyajins(); /* Corregi algo super pequeño aqui antes salia "getSaiyajin" */
     }
 
     @PostMapping
@@ -32,10 +32,15 @@ public class SaiyajinController {
     public Saiyajin buscarSaiyajin(@PathVariable int id) {
         return saiyajinService.getSaiyajin(id);
     }
-
+    
     @PutMapping("/{id}")
     public Saiyajin actualizarSaiyajin(@PathVariable int id, @RequestBody Saiyajin saiyajin) {
         return saiyajinService.updateSaiyajin(id, saiyajin);
+    }
+
+    @PatchMapping("/{id}")
+    public Saiyajin actualizarParcialSaiyajin(@PathVariable int id, @RequestBody Saiyajin saiyajinParcial) {
+        return saiyajinService.updateSaiyajinParcial(id, saiyajinParcial);
     }
     
     @DeleteMapping("/{id}")
